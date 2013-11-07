@@ -18,6 +18,8 @@ allow kickstart kickstart_data_file:file create_file_perms;
 allow kickstart kickstart_data_file:dir rw_dir_perms;
 allow kickstart radio_efs_file:file r_file_perms;
 allow kickstart radio_efs_file:dir search;
+allow kickstart sdcard_external:dir search;
+allow kickstart sdcard_external:file r_file_perms;
 
 # Let qcks access /dev/mdm node (modem driver)
 allow kickstart radio_device:chr_file r_file_perms;
