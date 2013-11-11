@@ -179,3 +179,5 @@ BOARD_SEPOLICY_UNION += \
 	thermald.te \
 	ueventd.te \
 	wpa_supplicant.te
+
+PRODUCT_VENDOR_KERNEL_HEADERS := device/lge/geefhd-common/kernel-headers
