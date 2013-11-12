@@ -148,7 +148,7 @@ BOARD_HAS_NO_SELECT_BUTTON := true
 COMMON_GLOBAL_CFLAGS += -DBOARD_CHARGING_CMDLINE_NAME='"androidboot.mode"' -DBOARD_CHARGING_CMDLINE_VALUE='"chargerlogo"'
 
 BOARD_SEPOLICY_DIRS += \
-        device/lge/geefhd-common/sepolicy
+    device/lge/geefhd-common/sepolicy
 
 BOARD_SEPOLICY_UNION += \
 	file_contexts \
