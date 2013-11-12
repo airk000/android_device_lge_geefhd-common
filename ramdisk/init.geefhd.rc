@@ -252,6 +252,8 @@ on post-fs-data
    chmod 0660 /sys/devices/i2c-0/0-0032/leds/R/brightness
    chmod 0660 /sys/devices/i2c-0/0-0032/led_pattern
 
+   write /sys/devices/i2c-0/0-0032/led_pattern 0
+
    # Enable vibrate
    chown system system /sys/class/timed_output/vibrator/enable
 
