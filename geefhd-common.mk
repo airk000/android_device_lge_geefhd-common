@@ -248,12 +248,6 @@ PRODUCT_PACKAGES += \
 	libgps.utils \
 	gps.msm8960
 
-PRODUCT_PACKAGES += \
-	bdAddrLoader \
-	libwfcu \
-	conn_init \
-	wifimac
-
 #PRODUCT_PACKAGES += \
 #	keystore.msm8960
 
