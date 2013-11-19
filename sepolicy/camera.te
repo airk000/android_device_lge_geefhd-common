@@ -10,6 +10,7 @@ allow camera self:process execmem;
 allow camera camera_device:dir search;
 allow camera { video_device camera_device }:chr_file rw_file_perms;
 allow camera { surfaceflinger mediaserver }:fd use;
+allow camera servicemanager:binder { call };
 
 # Create /data/cam_socket0 as camera_socket
 type_transition camera system_data_file:sock_file camera_socket "cam_socket0";
