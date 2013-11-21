@@ -44,7 +44,7 @@ PRODUCT_PACKAGES += Torch
 
 # Ramdisk
 PRODUCT_COPY_FILES += \
-        device/lge/geefhd-common/ramdisk/init.geefhd.rc:root/init.geefhd.rc \
+        device/lge/geefhd-common/ramdisk/init.geefhd-common.rc:root/init.geefhd-common.rc \
         device/lge/geefhd-common/ramdisk/init.geefhd.usb.rc:root/init.geefhd.usb.rc \
         device/lge/geefhd-common/ramdisk/init.qcom.sh:root/init.qcom.sh
 
