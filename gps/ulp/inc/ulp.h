@@ -36,7 +36,14 @@ extern "C"
 #endif
 
 #include <hardware/gps.h>
-#include "loc_eng.h"
+
+typedef int (ulp_report_position_cb)
+(
+      void* owner,
+      const GpsLocation* location_report_ptr,
+      unsigned int ext_data_length,
+      unsigned char* ext_data
+);
 
 /** Represents the standard ulp module interface. */
 typedef struct {
@@ -44,11 +51,20 @@ typedef struct {
     size_t   size;
 
     /**
-     * Starts the libulp module. 0: success
+     * Starts the ulp module. 0: success
      */
-    int   (*init)(loc_eng_data_s_type &loc_eng_data);
+    int   (*init)( void* owner, ulp_report_position_cb* cb);
 
-}ulpInterface;
+    /** Starts the ulp engine. 0: success      */
+    int   (*start_fix)( void );
+
+    /** Stops the ulp engine. 0: success */
+    int   (*stop_fix)( void );
+
+    /** Closes the interface */
+    int   (*destroy)( void );
+
+} ulpInterface;
 
 typedef const ulpInterface* (get_ulp_interface) (void);
 
