@@ -252,7 +252,8 @@ PRODUCT_PACKAGES += \
 #	keystore.msm8960
 
 PRODUCT_PROPERTY_OVERRIDES += \
-	drm.service.enabled=true
+	drm.service.enabled=true \
+	ro.kernel.android.checkjni=0
 
 PRODUCT_PROPERTY_OVERRIDES += \
 	wifi.interface=wlan0 \
